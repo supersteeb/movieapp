@@ -1,0 +1,15 @@
+				was in movieList to organize by columns. 
+                
+                				<!---	 <Card.Group itemsPerRow={4} stackable>
+                    {
+                        movies.map(movie => {
+                            if (movie) {
+                                return <MovieCard movie={movie.key} key={movie.id} title={movie.title} /* type={type} */ /* handleModal={handleModal} */ />
+                            }
+                        })
+                    }
+                </Card.Group> --->
+            )
+
+            in app.js
+                          <h3 className="App-title">A one-page app in react that lets you view movies</h3>

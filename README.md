@@ -1,6 +1,6 @@
 # Project 1 - *Movie App*
 
-**Movie App** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+**Movie App** is a movies listing app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
 Time spent: **X** hours spent in total
 
@@ -8,13 +8,13 @@ Time spent: **X** hours spent in total
 
 The following **required** functionality is completed:
 
-- [ ] User can view a list of movies currently playing in theaters.
+- [x] User can view a list of movies currently playing in theaters.
 - [ ] User can show/hide details about each movie.
-- [ ] User sees loading state while waiting for the API.
+- [x] User sees loading state while waiting for the API.
 - [ ] User sees an error message when there is a network error.
-- [ ] User can refresh the movie list.
-- [ ] User can search/filter the movie results via a search bar.
-- [ ] User can use the page on both desktop and mobile viewport sizes.
+- [x] User can refresh the movie list.
+- [x] User can search/filter the movie results via a search bar.
+- [x] User can use the page on both desktop and mobile viewport sizes.
 
 The following **optional** features are implemented:
 
