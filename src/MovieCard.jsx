@@ -2,7 +2,19 @@ import React, {Component} from 'react';
 import { Card, Box, Collapse } from 'bloomer';
 import './MovieCard.css';
 import { MovieDetails } from './MovieDetails';
-import { CardImage, CardBody, CardTitle, CardText } from 'bloomer/lib/components/Card/CardImage';
+import { CardHeader,
+	CardHeaderTitle,
+	CardImage, 
+	CardBody, 
+	Image, 
+	CardContent,
+	Content,
+	CardFooter,
+	CardFooterItem,
+	Icon, 
+	Tile,
+	CardTitle, 
+	CardText } from 'bloomer/lib/components/Card/CardImage';
 import { Button } from 'bloomer/lib/elements/Button';
 
 export default class MovieCard extends Component {
@@ -10,7 +22,7 @@ export default class MovieCard extends Component {
 		super(props);
 		this.clickMore = this.clickMore.bind(this);
 		this.state = {
-			isCollapsed: false
+			showMore: false
 		};
 	}
 
@@ -28,6 +40,39 @@ export default class MovieCard extends Component {
 	}; */
 
 	render() {
+		const toggleDescription = e => {
+			e.preventDefault();
+			this.setState({
+				showMore: !this.state.showMore
+			});
+		};
+
+		let description;
+		if (this.state.showMore) {
+		  description = (
+			<div>
+			  <CardContent>
+				<Content>{this.props.movie.overview}</Content>
+			  </CardContent>
+			  <CardFooter>
+				<CardFooterItem href="#" onClick={toggleDescription}>
+				  Description <Icon icon="angle-double-up" />
+				</CardFooterItem>
+			  </CardFooter>
+			</div>
+		  );
+		} else {
+		  description = (
+			<div>
+			  <CardFooter>
+				<CardFooterItem href="#" onClick={toggleDescription}>
+				  Description <Icon icon="angle-double-down" />
+				</CardFooterItem>
+			  </CardFooter>
+			</div>
+		  );
+		}
+
 		return (
 			/*<Card>
 				<CardImage
@@ -50,9 +95,30 @@ export default class MovieCard extends Component {
 				</CardBody>
 			</Card> */ 
 			<Box className="MovieCard-Box">
-			{this.props.poster_path}
 				{this.props.title}
 				</Box>
+
+			/*<Tile className="MovieCard-Tile" isPulled="left" >
+				<Card className="MovieCard-Card">
+					<CardHeader>
+						<CardHeaderTitle>
+							{this.props.title}
+							<span className="MovieCard-Rating">
+								<Icon icon="heart" /> {this.props.vote_average}
+							</span>
+						</CardHeaderTitle>
+					</CardHeader>
+					<CardImage>
+						<Image
+						isRatio="2:3"
+						src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${
+							this.props.poster_path
+						}`}
+						/>
+					</CardImage>
+					{description}
+				</Card>
+			</Tile>*/
 		);
 	}
 }

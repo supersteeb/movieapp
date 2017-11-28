@@ -45,7 +45,6 @@ class App extends Component {
     this.setState({
       movies: this.movieResults,
       isLoading: false,
-      filterValue: ''
     });
   }
 
@@ -57,7 +56,6 @@ class App extends Component {
     this.setState({
       page,
       movies: this.movieResults,
-      filterValue: ''
     });
   }
 
