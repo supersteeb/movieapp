@@ -74,51 +74,12 @@ export default class MovieCard extends Component {
 		}
 
 		return (
-			/*<Card>
-				<CardImage
-				top
-				width="50%"
-				alt="poster card"
-				//src={/*this.getSrcPoster(this.props.poster_path)*/  //}
-			//	/> 
-			/*	<CardBody>
-					<CardTitle>{ this.props.title }</CardTitle>;
-					<Button
-						color="primary"
-						onClick={ () => this.clickMore(this.state.isCollapsed)}
-						style={{ marginBottom: "1rem" }} 
-					> More
-					</Button>
-					<Collapse isOpen={this.state.isCollapsed}>
-						<CardText>{this.props.overview}</CardText>
-					</Collapse>
-				</CardBody>
-			</Card> */ 
+
 			<Box className="MovieCard-Box">
 				{this.props.title}
 				</Box>
 
-			/*<Tile className="MovieCard-Tile" isPulled="left" >
-				<Card className="MovieCard-Card">
-					<CardHeader>
-						<CardHeaderTitle>
-							{this.props.title}
-							<span className="MovieCard-Rating">
-								<Icon icon="heart" /> {this.props.vote_average}
-							</span>
-						</CardHeaderTitle>
-					</CardHeader>
-					<CardImage>
-						<Image
-						isRatio="2:3"
-						src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${
-							this.props.poster_path
-						}`}
-						/>
-					</CardImage>
-					{description}
-				</Card>
-			</Tile>*/
+
 		);
 	}
 }
